@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import { pagesBase } from './pages.base'
 
-/** GitHub Pages 用户站：https://xieshuang.github.io/（仓库须命名为 xieshuang.github.io） */
-export default defineConfig({
-  base: '/',
+export default defineConfig(({ command }) => ({
+  // 本地 dev 用根路径；发布构建用 GitHub Pages 路径
+  base: command === 'build' ? pagesBase : '/',
   plugins: [react(), tailwindcss()],
-})
+}))

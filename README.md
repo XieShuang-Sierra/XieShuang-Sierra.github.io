@@ -53,14 +53,9 @@ VITE_FORM_ENDPOINT=https://formsubmit.co/ajax/你的新邮箱@example.com
 
 ## 部署到 GitHub Pages（免费，推荐）
 
-**线上地址：** https://xieshuang.github.io/
+**线上地址：** https://xieshuang-sierra.github.io/
 
-推送 `main` 分支后，GitHub Actions 会自动构建并发布（见 `.github/workflows/deploy-pages.yml`）。
-
-### 前置条件（重要）
-
-1. GitHub **用户名**必须是 `xieshuang`（与网址一致）。若当前是其他用户名，请到 [GitHub 账号设置](https://github.com/settings/admin) 修改 Username（需未被占用）。
-2. 仓库名必须是 **`xieshuang.github.io`**（在仓库 **Settings → General → Repository name** 里改名）。
+仓库须命名为 `XieShuang-Sierra.github.io`（与 GitHub 用户名一致）。推送 `main` 后 Actions 自动发布。
 
 ### 首次开启 Pages（只需做一次）
 
