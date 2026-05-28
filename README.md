@@ -51,30 +51,31 @@ VITE_FORM_ENDPOINT=https://formsubmit.co/ajax/你的新邮箱@example.com
 
 文案集中在 [`src/data/resume.ts`](src/data/resume.ts)，修改后无需改动组件。
 
-## 部署到 Vercel
+## 部署到 GitHub Pages（免费，推荐）
 
-### 1. 推送到 GitHub
+**线上地址：** https://youyouErica.github.io/internship-resume/
+
+推送 `main` 分支后，GitHub Actions 会自动构建并发布（见 `.github/workflows/deploy-pages.yml`）。
+
+### 首次开启（只需做一次）
+
+1. 打开仓库 https://github.com/youyouErica/internship-resume  
+2. **Settings** → 左侧 **Pages**  
+3. **Build and deployment** → **Source** 选 **GitHub Actions**（不要选 Buy domain）  
+4. 保存后，到 **Actions** 标签页，等最新 “Deploy to GitHub Pages”  workflow 跑绿  
+5. 再回到 **Settings → Pages**，会显示站点 URL
+
+### 更新网站
 
 ```bash
-git init
 git add .
-git commit -m "feat: 个人作品集网站"
-git branch -M main
-git remote add origin https://github.com/你的用户名/你的仓库名.git
-git push -u origin main
+git commit -m "更新说明"
+git push
 ```
 
-### 2. 连接 Vercel
+## 部署到 Vercel（可选）
 
-1. 登录 [https://vercel.com](https://vercel.com)。
-2. **Add New Project** → 导入上述 GitHub 仓库。
-3. Framework Preset 选择 **Vite**（通常会自动识别）。
-4. 若更换了收件邮箱，可在 Vercel 添加 `VITE_FORM_ENDPOINT`（一般不需要）。
-5. 点击 **Deploy**，完成后获得 `https://项目名.vercel.app` 链接。
-
-### 3. 自定义域名（可选）
-
-在 Vercel 项目 **Settings → Domains** 中添加你的域名并按提示配置 DNS。
+若已部署，可使用 `https://internship-resume.vercel.app/`。与 GitHub Pages 二选一或同时保留均可。
 
 ## 项目结构
 
